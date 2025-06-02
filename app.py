@@ -49,13 +49,13 @@ def index():
 def pagina_equipe():
     equipe = [
         {
-            "nome": "abraão eber", 
+            "nome": "Abraão", 
             "linkedin": "https://github.com/abraao488", 
             "foto": "abraao.jpg", 
             "info": "dev"
         },
         {
-            "nome": "brenner cordeiro", 
+            "nome": "Brenner", 
             "linkedin": "https://github.com/bjohn3301", 
             "foto": "brenner.jpg", 
             "info": "dev"
