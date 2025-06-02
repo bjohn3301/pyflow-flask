@@ -1,9 +1,14 @@
+## Acesse o Site Online!
+
+Você pode interagir com o Py.Flow ao vivo aqui: [https://pyflow-flask.onrender.com](https://pyflow-flask.onrender.com)
+
 # Py.Flow - Fundamentos de Python (UNIESP)
 
 Este projeto consiste no desenvolvimento de uma aplicação web interativa utilizando o framework Flask. O objetivo é criar um site informativo sobre os fundamentos da programação em Python, incluindo uma funcionalidade de perguntas e respostas integrada com a API do Gemini e um dicionário interativo de termos de programação com persistência em arquivo JSON.
 
 <!-- Badges de Tecnologia e Status -->
 <p align="left">
+  <img src="https://img.shields.io/badge/website-online-green?style=for-the-badge&logo=render" alt="Site Online"/> 
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
