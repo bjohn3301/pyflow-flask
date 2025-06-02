@@ -110,7 +110,7 @@ def tirar_duvidas():
         else:
             try:
                 if pergunta_usuario.lower() == "oi" or pergunta_usuario.lower() == "olá":
-                     prompt_completo = f"aja como um assistente virtual amigável. o usuário disse '{pergunta_usuario}'. responda de forma curta e simpática, como 'oi! tudo bem? como posso te ajudar hoje? 😊'. não use formatação markdown como negrito ou itálico."
+                     prompt_completo = f"aja como um assistente virtual amigável. o usuário disse '{pergunta_usuario}'. responda de forma curta e simpática, como 'oi! tudo bem? como posso te ajudar hoje?'. não use formatação markdown como negrito ou itálico."
                 else:
                     prompt_completo = f"aja como um assistente virtual amigável que está ajudando alguém a aprender python. por favor, responda à seguinte pergunta de forma simples, direta e em tom de conversa. evite usar formatação markdown como negrito ou itálico, a menos que seja estritamente para código. a pergunta é: {pergunta_usuario}"
                 
