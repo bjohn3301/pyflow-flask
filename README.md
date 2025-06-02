@@ -2,11 +2,9 @@
 
 Você pode acessar o Py.Flow clicando no botão abaixo:
 
-<p align="center">
   <a href="https://pyflow-flask.onrender.com" target="_blank">
     <img src="https://img.shields.io/badge/VER%20DEMO%20ONLINE-%230077cc.svg?style=for-the-badge&logo=matrix&logoColor=white" alt="Py.Flow">
   </a>
-</p>
 
 # Py.Flow - Fundamentos de Python (UNIESP)
 
