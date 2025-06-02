@@ -1,6 +1,6 @@
-## Acesse o Site Online!
+## Acesse o Site Online
 
-Você pode interagir com o Py.Flow ao vivo aqui: [https://pyflow-flask.onrender.com](https://pyflow-flask.onrender.com)
+Você pode acessar o Py.Flow clicando no link: [https://pyflow-flask.onrender.com](https://pyflow-flask.onrender.com)
 
 # Py.Flow - Fundamentos de Python (UNIESP)
 
