@@ -109,7 +109,11 @@ def tirar_duvidas():
             flash("por favor, digite sua pergunta.", "warning")
         else:
             try:
-                prompt_completo = f"olá, gemini. estou aprendendo python e tenho uma dúvida. poderia explicar de uma forma simples e direta, tudo em minúsculo e sem usar termos muito complicados? a pergunta é:\n\n{pergunta_usuario}\n\nobrigado!"
+                if pergunta_usuario.lower() == "oi" or pergunta_usuario.lower() == "olá":
+                     prompt_completo = f"aja como um assistente virtual amigável. o usuário disse '{pergunta_usuario}'. responda de forma curta e direta, como 'oi! tudo bem? como posso te ajudar?"
+                else:
+                    prompt_completo = f"aja como um assistente virtual amigável que está ajudando alguém a aprender python. responda a seguinte pergunta de forma simples, direta, em tom de conversa. a pergunta é: {pergunta_usuario}"
+                
                 response = gemini_model.generate_content(prompt_completo)
                 
                 texto_resposta = response.text.lower().strip()
