@@ -68,8 +68,8 @@ A integração com a API do Gemini é feita na rota `/tirar-duvidas` do `app.py`
 
 1.  **Clone o repositório:**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO_AQUI>
-    cd <NOME_DA_PASTA_DO_PROJETO>
+    git clone <https://github.com/bjohn3301/pyflow-flask>
+    cd <pyflow-flask>
     ```
 2.  **Crie e ative um ambiente virtual:**
     ```bash
@@ -86,7 +86,7 @@ A integração com a API do Gemini é feita na rota `/tirar-duvidas` do `app.py`
 4.  **Crie o arquivo `.env`:**
     Na raiz do projeto, crie um arquivo `.env` e adicione sua chave da API do Gemini:
     ```
-    GEMINI_API_KEY="SUA_CHAVE_API_DO_GEMINI_AQUI"
+    GEMINI_API_KEY="chave da api"
     ```
 5.  **Execute a aplicação Flask:**
     ```bash
