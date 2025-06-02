@@ -110,14 +110,19 @@ def tirar_duvidas():
         else:
             try:
                 if pergunta_usuario.lower() == "oi" or pergunta_usuario.lower() == "olá":
-                     prompt_completo = f"aja como um assistente virtual amigável. o usuário disse '{pergunta_usuario}'. responda de forma curta e direta, como 'oi! tudo bem? como posso te ajudar?"
+                     prompt_completo = f"aja como um assistente virtual amigável. o usuário disse '{pergunta_usuario}'. responda de forma curta e simpática, como 'oi! tudo bem? como posso te ajudar hoje? 😊'. não use formatação markdown como negrito ou itálico."
                 else:
-                    prompt_completo = f"aja como um assistente virtual amigável que está ajudando alguém a aprender python. responda a seguinte pergunta de forma simples, direta, em tom de conversa. a pergunta é: {pergunta_usuario}"
+                    prompt_completo = f"aja como um assistente virtual amigável que está ajudando alguém a aprender python. por favor, responda à seguinte pergunta de forma simples, direta e em tom de conversa. evite usar formatação markdown como negrito ou itálico, a menos que seja estritamente para código. a pergunta é: {pergunta_usuario}"
                 
                 response = gemini_model.generate_content(prompt_completo)
                 
-                texto_resposta = response.text.lower().strip()
+                texto_resposta = response.text.strip() 
                 
+                texto_resposta = re.sub(r'\*\*(.*?)\*\*', r'\1', texto_resposta) 
+                texto_resposta = re.sub(r'__(.*?)__', r'\1', texto_resposta) 
+                texto_resposta = re.sub(r'\*(.*?)\*', r'\1', texto_resposta)   
+                texto_resposta = re.sub(r'_(.*?)_', r'\1', texto_resposta)    
+
                 texto_resposta = re.sub(r'^\s*```[a-zA-Z]*\n?', '', texto_resposta)
                 texto_resposta = re.sub(r'\n?```\s*$', '', texto_resposta)
                 texto_resposta = texto_resposta.strip()
