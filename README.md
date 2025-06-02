@@ -16,8 +16,8 @@ Este projeto consiste no desenvolvimento de uma aplicação web interativa utili
 
 ## Equipe
 
-*   **Abraão Eber** - Dev - [GitHub](https://github.com/abraao488)
-*   **Brenner Cordeiro** - Dev - [GitHub](https://github.com/bjohn3301)
+*   **Abraão** - Dev - [GitHub](https://github.com/abraao488)
+*   **Brenner** - Dev - [GitHub](https://github.com/bjohn3301)
 
 ## 1. Estrutura do Site e Conteúdo de Cada Seção
 
