@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>tirar dúvidas com a ia</h2>
+        <p>tem alguma pergunta sobre python? escreva abaixo que a ia tenta te ajudar.</p>
+
+        <form method="POST" action="{{ url_for('tirar_duvidas') }}" class="form-ia">
+            <div>
+                <label for="pergunta">sua pergunta:</label><br>
+                <textarea id="pergunta" name="pergunta" rows="5" required placeholder="ex: como funciona uma lista em python?">{{ pergunta_usuario }}</textarea>
+            </div>
+            <br>
+            <div>
+                <button type="submit" class="btn btn-primary">enviar pergunta</button>
+            </div>
+        </form>
+
+        {% if resposta_gemini %}
+            <hr class="separator">
+            <h3>resposta da ia:</h3>
+            <div class="resposta-ia">
+                {{ resposta_gemini | safe }}
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

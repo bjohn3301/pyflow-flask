@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>laços de repetição (for e while)</h2>
+        
+        <h3>e aí, qualé?</h3>
+        <p>
+            repetição, ou loop, é pra quando vc precisa fazer a mesma coisa várias vezes sem ter que escrever o código milhão de vezes. tipo, imagina ter que dar "oi" pra 100 pessoas, uma por uma no código? sem chance.
+            o python tem dois jeitos principais: o <code>for</code> e o <code>while</code>.
+        </p>
+
+        <h3>o <code>for</code> é tipo assim:</h3>
+        <p>
+            o <code>for</code> é bom quando vc já sabe quantas vezes quer repetir ou quer passar por cada item de uma lista, por exemplo.
+            ele pega cada coisinha de uma sequência (tipo uma lista de nomes) e faz o que vc mandar com ela.
+        </p>
+        <pre><code>
+nomes = ['zé', 'maria', 'chico']
+for nome in nomes:
+    print(f'e aí, {nome}!')
+
+for i in range(5): 
+    print(f'contando: {i}')
+        </code></pre>
+
+        <h3>e o <code>while</code>?</h3>
+        <p>
+            o <code>while</code> é pra quando vc quer repetir ENQUANTO uma condição for verdadeira.
+            tipo, "enquanto a luz estiver acesa, continue lendo". se a condição virar falsa, o loop para.
+            cuidado pra não fazer um loop infinito com o <code>while</code>, hein! tem que ter algo dentro do loop que mude a condição.
+        </p>
+        <pre><code>
+contador = 0
+while contador < 3:
+    print(f'o contador ainda é {contador}, menor que 3')
+    contador = contador + 1 
+print('agora o contador chegou em 3 e o while parou.')
+
+numero = 0
+while True: 
+    print(f'digita um número (0 pra sair): {numero}')
+    if numero == 5:
+        print('achou o 5, saindo fora!')
+        break 
+    if numero % 2 != 0: 
+        print('esse é ímpar, pulando...')
+        numero = numero + 1
+        continue 
+    
+    print('esse é par e não é 5.')
+    numero = numero + 1
+    if numero > 10: 
+        break
+        </code></pre>
+    </section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>dicionário de termos</h2>
+        <p><a href="{{ url_for('dicionario_adicionar') }}" class="btn btn-success">adicionar novo termo</a></p>
+        
+        {% if termos %}
+            <ul class="lista-dicionario">
+            {% for item in termos %}
+                <li class="animated-item">
+                    <div>
+                        <strong>{{ item.termo }}</strong>: {{ item.definicao }}
+                    </div>
+                    <div class="acoes-dicionario">
+                        <a href="{{ url_for('dicionario_alterar', termo_original=item.termo) }}" class="btn btn-small btn-warning">alterar</a>
+                        <form method="POST" action="{{ url_for('dicionario_deletar', termo_original=item.termo) }}" style="display:inline;">
+                            <button type="submit" class="btn btn-small btn-danger" onclick="return confirm('tem certeza que quer deletar o termo \'{{ item.termo }}\'? essa ação não pode ser desfeita.');">deletar</button>
+                        </form>
+                    </div>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>ainda não temos termos no dicionário. que tal <a href="{{ url_for('dicionario_adicionar') }}">adicionar o primeiro</a>?</p>
+        {% endif %}
+    </section>
+{% endblock %}

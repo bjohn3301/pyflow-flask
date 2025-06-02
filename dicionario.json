@@ -1,0 +1,14 @@
+[
+    {
+        "termo": "Algoritmo",
+        "definicao": "Uma sequência finita de instruções bem definidas e não ambíguas, cada uma das quais pode ser executada mecanicamente num período de tempo finito e com uma quantidade de esforço finita."
+    },
+    {
+        "termo": "Flask",
+        "definicao": "Um microframework para desenvolvimento web em Python, conhecido por sua simplicidade e flexibilidade."
+    },
+    {
+        "termo": "Variável",
+        "definicao": "Um espaço na memória do computador destinado a um dado que pode ser alterado durante a execução de um programa."
+    }
+]

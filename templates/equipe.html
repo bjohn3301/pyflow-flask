@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>nossa equipe</h2>
+        <div class="equipe-container">
+            {% for membro in equipe %}
+                <div class="membro-card animated-item">
+                    {% if membro.foto %}
+                        <img src="{{ url_for('static', filename='images/' + membro.foto) }}" alt="foto de {{ membro.nome }}" class="membro-foto">
+                    {% else %}
+                        <div class="membro-foto-placeholder">foto (opcional)</div>
+                    {% endif %}
+                    <h3>{{ membro.nome }}</h3>
+                    {% if membro.linkedin and membro.linkedin != '#' %}
+                        {% if 'github.com' in membro.linkedin %}
+                            <p><a href="{{ membro.linkedin }}" target="_blank" class="link-social">github</a></p>
+                        {% else %}
+                            <p><a href="{{ membro.linkedin }}" target="_blank" class="link-social">linkedin</a></p>
+                        {% endif %}
+                    {% endif %}
+                    {% if membro.info %}
+                        <p>{{ membro.info }}</p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

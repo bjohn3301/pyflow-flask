@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>alterar termo: {{ termo_original }}</h2>
+        
+        <form method="POST" class="form-dicionario">
+            <div>
+                <label for="termo">termo:</label><br>
+                <input type="text" id="termo" name="termo" value="{{ termo.termo }}" required>
+            </div>
+            <div>
+                <label for="definicao">nova definição:</label><br>
+                <textarea id="definicao" name="definicao" rows="4" required>{{ termo.definicao }}</textarea>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">salvar alterações</button>
+                <a href="{{ url_for('dicionario_listar') }}" class="btn btn-secondary">cancelar</a>
+            </div>
+        </form>
+    </section>
+{% endblock %}

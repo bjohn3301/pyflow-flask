@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>funções e procedimentos (def)</h2>
+        
+        <h3>pra que servem?</h3>
+        <p>
+            uma função é um bloco de código que faz uma tarefa específica. a grande vantagem é que você pode escrever esse código uma vez e depois chamar a função várias vezes, de lugares diferentes do seu programa, sem precisar repetir tudo. isso ajuda a deixar o código mais organizado, mais fácil de ler e de dar manutenção.
+        </p>
+        <p>
+            às vezes a gente ouve falar de "procedimento". em python, não tem uma diferença muito grande. geralmente, um procedimento é pensado como uma função que realiza uma ação mas não retorna um valor específico no final (por exemplo, só imprime algo na tela). toda função em python retorna algo, mesmo que seja <code>None</code> (que significa "nada") se você não especificar um retorno.
+        </p>
+
+        <h3>como criar?</h3>
+        <p>
+            você define uma função usando a palavra-chave <code>def</code>, seguida pelo nome que você quer dar pra função e parênteses <code>()</code>. dentro dos parênteses, você pode colocar "parâmetros", que são informações que a função pode receber para trabalhar.
+            se a função precisa te dar um resultado de volta, você usa a palavra-chave <code>return</code> seguida do valor que ela vai retornar.
+        </p>
+
+        <h3>exemplos:</h3>
+        <pre><code>
+# função que cumprimenta alguém
+def cumprimentar(nome):
+    print(f'olá, {nome}! tudo bem?')
+
+# chamando a função
+cumprimentar('ana')
+cumprimentar('carlos')
+
+# função que calcula a área de um retângulo e retorna o valor
+def calcular_area_retangulo(largura, altura):
+    area = largura * altura
+    return area
+
+area1 = calcular_area_retangulo(5, 10) 
+print(f'a área do primeiro retângulo é: {area1}')
+
+area2 = calcular_area_retangulo(7, 3)
+print(f'a área do segundo retângulo é: {area2}')
+
+# função que não retorna um valor útil (procedimento)
+def mostrar_aviso():
+    print('atenção: salve seu trabalho antes de sair.')
+
+mostrar_aviso()
+
+# parâmetros com valores padrão
+def criar_pedido(item, quantidade=1):
+    print(f'pedido: {quantidade}x {item}')
+
+criar_pedido('hambúrguer') # usa quantidade padrão 1
+criar_pedido('pizza', 2)   # especifica a quantidade
+        </code></pre>
+    </section>
+{% endblock %}

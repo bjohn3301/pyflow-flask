@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>vetores e matrizes (listas e listas de listas)</h2>
+        
+        <h3>o que são?</h3>
+        <p>
+            pense em um "vetor" como uma coleção de itens, tipo uma gaveta com várias meias. em python, a gente geralmente usa as <code>listas</code> pra isso. uma lista pode guardar vários valores (números, textos, o que for) em uma única variável.
+        </p>
+        <p>
+            uma "matriz" é como se fosse uma tabela ou uma planilha, com linhas e colunas. a gente faz isso em python usando uma lista onde cada item dentro dela é outra lista. então, é uma lista de listas.
+        </p>
+
+        <h3>como usar?</h3>
+        <p>
+            para pegar um item de uma lista (vetor), você usa a posição dele, que começa em zero. o primeiro item é <code>[0]</code>, o segundo é <code>[1]</code>, e por aí vai.
+            para uma matriz, você usa duas posições: a primeira para a linha e a segunda para a coluna, tipo <code>[linha][coluna]</code>.
+        </p>
+
+        <h3>exemplo de lista (vetor):</h3>
+        <pre><code>
+# lista de compras
+compras = ['arroz', 'feijão', 'macarrão', 'óleo']
+print(f'o primeiro item é: {compras[0]}')
+
+# adicionar um item no final
+compras.append('sal')
+print(f'lista com sal: {compras}')
+
+# mudar um item
+compras[1] = 'feijão carioca' 
+print(f'lista com feijão diferente: {compras}')
+
+# quantos itens tem na lista?
+print(f'tem {len(compras)} itens na lista.')
+
+# passar por todos os itens
+print('lista completa:')
+for item in compras:
+    print(f'- {item}')
+        </code></pre>
+
+        <h3>exemplo de matriz (lista de listas):</h3>
+        <pre><code>
+# notas de alunos: [português, matemática, história]
+notas_turma = [
+    [7.5, 8.0, 6.5], 
+    [9.0, 7.0, 8.5], 
+    [6.0, 5.5, 7.0]  
+]
+
+# nota de matemática do segundo aluno (aluno na posição 1, matemática na posição 1)
+nota_mat_aluno2 = notas_turma[1][1]
+print(f'nota de matemática do segundo aluno: {nota_mat_aluno2}')
+
+# mudar a nota de história do primeiro aluno
+notas_turma[0][2] = 7.0 
+
+# mostrar todas as notas
+print('todas as notas da turma:')
+for notas_aluno in notas_turma:
+    print(notas_aluno)
+        </code></pre>
+        <p>
+            listas são muito úteis porque você pode mudar elas, adicionar ou tirar coisas facilmente.
+        </p>
+    </section>
+{% endblock %}

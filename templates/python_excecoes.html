@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>tratamento de exceções (try, except)</h2>
+        
+        <h3>o que é uma exceção?</h3>
+        <p>
+            uma exceção é um erro que acontece enquanto o seu programa está rodando. por exemplo, se o programa tentar dividir um número por zero, ou tentar acessar um arquivo que não existe, isso vai gerar uma exceção.
+            se você não "tratar" essa exceção, o programa para de funcionar na hora e mostra uma mensagem de erro.
+        </p>
+
+        <h3>por que tratar?</h3>
+        <p>
+            tratar exceções é importante para criar programas mais robustos, ou seja, que não quebram por qualquer coisinha. em vez de parar tudo, você pode prever possíveis erros e dizer ao programa como reagir a eles de uma forma mais controlada, como mostrar uma mensagem amigável para o usuário ou tentar uma alternativa.
+        </p>
+
+        <h3>como fazer?</h3>
+        <p>
+            em python, a gente usa os blocos <code>try</code> e <code>except</code>.
+            você coloca o código que pode dar erro dentro do bloco <code>try</code>.
+            se um erro acontecer ali, o python pula para o bloco <code>except</code> correspondente ao tipo de erro que aconteceu.
+            você também pode usar <code>else</code>, que executa se não houve erro no <code>try</code>, e <code>finally</code>, que executa sempre, independentemente de ter acontecido um erro ou não.
+        </p>
+
+        <h3>exemplos:</h3>
+        <pre><code>
+# exemplo com divisão
+try:
+    numerador = float(input('digite o numerador: '))
+    denominador = float(input('digite o denominador: '))
+    resultado = numerador / denominador
+except ValueError:
+    print('ops! você precisa digitar números válidos.')
+except ZeroDivisionError:
+    print('opa! não dá pra dividir por zero, certo?')
+except Exception as erro_inesperado:
+    print(f'aconteceu um erro que eu não esperava: {erro_inesperado}')
+else:
+    print(f'o resultado da divisão é: {resultado}')
+finally:
+    print('bloco de tentativa de divisão finalizado.')
+
+print('--- o programa continua aqui ---')
+
+# exemplo com arquivos
+try:
+    nome_arquivo = 'meu_documento.txt'
+    with open(nome_arquivo, 'r') as arquivo:
+        conteudo = arquivo.read()
+        print('conteúdo do arquivo:')
+        print(conteudo)
+except FileNotFoundError:
+    print(f'que pena, o arquivo "{nome_arquivo}" não foi encontrado.')
+except Exception as e:
+    print(f'um erro ocorreu ao tentar ler o arquivo: {e}')
+        </code></pre>
+        <p>
+            usar <code>try</code> e <code>except</code> ajuda seu programa a lidar com imprevistos sem parar de funcionar.
+        </p>
+    </section>
+{% endblock %}

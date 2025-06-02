@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="animated-item">
+        <h2>estruturas de seleção (if, elif, else)</h2>
+        
+        <h3>o que é isso?</h3>
+        <p>
+            basicamente, estruturas de seleção permitem que seu programa tome decisões. 
+            ele verifica se uma condição é verdadeira e, dependendo do resultado, executa um bloco de código ou outro.
+            em python, usamos <code>if</code> para testar a primeira condição, <code>elif</code> (que é uma abreviação de "else if") para testar condições adicionais se as anteriores forem falsas, e <code>else</code> para um bloco de código que roda se nenhuma das condições anteriores for verdadeira.
+        </p>
+
+        <h3>quando usar?</h3>
+        <p>
+            você usa isso o tempo todo. por exemplo, para verificar se um usuário digitou a senha correta,
+            para determinar se um aluno passou de ano com base na nota, ou para mudar o comportamento de um jogo dependendo da ação do jogador.
+            qualquer situação onde o programa precisa seguir caminhos diferentes baseado em alguma informação.
+        </p>
+
+        <h3>exemplo de código:</h3>
+        <pre><code>
+idade = 20
+tem_carteira = True
+
+if idade >= 18 and tem_carteira:
+    print('pode dirigir.')
+elif idade >= 18 and not tem_carteira:
+    print('maior de idade, mas precisa tirar a carteira pra dirigir.')
+else:
+    print('não pode dirigir ainda.')
+
+nota = 7.5
+if nota >= 7.0:
+    print('aprovado!')
+elif nota >= 5.0:
+    print('recuperação.')
+else:
+    print('reprovado.')
+        </code></pre>
+    </section>
+{% endblock %}
